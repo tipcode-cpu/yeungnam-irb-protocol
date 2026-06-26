@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Yeungnam IRB study_info",
+  "description": "영남대학교병원(YUMC) IRB 제출 문서 3종 생성을 위한 단일 입력 스키마. 모든 산출물(연구계획서 본문 / 계획서 요약[서식1] / 동의면제 점검표[서식41])은 이 파일을 single source of truth로 사용한다.",
+  "type": "object",
+  "required": ["title", "objective", "design", "investigators", "inclusion_criteria", "exclusion_criteria", "primary_endpoint", "statistics"],
+  "properties": {
+    "title": {"type": "string", "description": "과제명 (국문)"},
+    "title_en": {"type": "string", "description": "과제명 (영문, 선택)"},
+    "objective": {"type": "string", "description": "연구 목적 (1~2문장)"},
+    "design": {"type": "string", "description": "연구 디자인", "examples": ["후향적 코호트 비교", "후향적 단면연구", "후향적 환자-대조군"]},
+    "disease": {"type": "string", "description": "대상질환"},
+    "institution": {"type": "string", "default": "영남대학교병원", "description": "임상연구 참여 기관"},
+    "department": {"type": "string", "default": "순환기내과", "description": "소속 과"},
+    "period": {"type": "string", "default": "IRB 승인일로부터 2년", "description": "임상연구 예정 기간"},
+    "study_data_window": {"type": "string", "description": "자료 수집 대상 기간 (예: 2013년 1월 1일 ~ 2019년 12월 31일)"},
+    "investigators": {
+      "type": "object",
+      "required": ["pi"],
+      "properties": {
+        "pi": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {"type": "string"},
+            "name_en": {"type": "string"},
+            "title": {"type": "string", "examples": ["교수", "Assistant professor"]},
+            "affiliation": {"type": "string", "default": "영남대학교병원 순환기내과"},
+            "email": {"type": "string"}
+          }
+        },
+        "co_investigators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {"type": "string"},
+              "role": {"type": "string", "examples": ["전임의", "전공의", "학생"]},
+              "affiliation": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "target_n": {"type": "string", "description": "목표 대상자 수 및 산출 근거", "examples": ["약 1700명 추정 (국내: 1700명, 본원: 1700명)"]},
+    "age_min": {"type": "integer", "default": 19, "description": "최소 연령(만)"},
+    "inclusion_criteria": {"type": "array", "items": {"type": "string"}, "description": "선정 기준 목록"},
+    "exclusion_criteria": {"type": "array", "items": {"type": "string"}, "description": "제외 기준 목록"},
+    "background": {"type": "string", "description": "연구 배경 (서술형). 없으면 생략됨."},
+    "intervention_device": {"type": "string", "default": "없음", "description": "임상시험 의약품/의료기기 (해당 없으면 '없음')"},
+    "primary_endpoint": {"type": "string", "description": "1차 평가변수"},
+    "secondary_endpoints": {"type": "array", "items": {"type": "string"}, "description": "2차 평가변수 목록"},
+    "data_collected": {"type": "array", "items": {"type": "string"}, "description": "수집 자료 항목 (8.1 수집 자료)"},
+    "statistics": {"type": "array", "items": {"type": "string"}, "description": "통계분석 방법 문장 목록"},
+    "risk_benefit": {"type": "string", "description": "연구 참여에 따른 위험 및 이익. 후향연구 기본문구가 default."},
+    "consent_waiver": {
+      "type": "object",
+      "description": "동의면제 점검표[서식41]용. 후향 의무기록 연구는 보통 면제 가능.",
+      "properties": {
+        "eligible": {"type": "boolean", "default": true, "description": "동의면제 가능 여부 (YES/NO)"},
+        "checkers": {"type": "array", "items": {"type": "string"}, "description": "점검자 명단"},
+        "irb_file_no": {"type": "string", "default": ""}
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "참고문헌. CITATION GROUNDING: PMID 또는 DOI가 동반된 항목만 허용. 자유 생성 인용 금지.",
+      "items": {
+        "type": "object",
+        "required": ["citation"],
+        "properties": {
+          "citation": {"type": "string", "description": "Vancouver 형식 전체 인용"},
+          "pmid": {"type": "string"},
+          "doi": {"type": "string"}
+        }
+      }
+    }
+  }
+}

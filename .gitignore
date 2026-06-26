@@ -1,0 +1,22 @@
+# Filled study inputs with real data — NEVER commit
+study_info.json
+/study_info*.json
+!examples/study_info.template.json
+!examples/study_info.sample.json
+
+# Generated documents
+out/
+*.docx
+*.skill
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

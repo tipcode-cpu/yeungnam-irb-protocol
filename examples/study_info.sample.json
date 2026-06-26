@@ -1,0 +1,79 @@
+{
+  "_note": "가상의 예시입니다 (실제 환자/연구자 정보 아님). 본인 연구로 교체해 사용하세요.",
+  "title": "급성 심근경색 환자에서 입원 시 NT-proBNP 수치와 장기 예후의 연관성에 관한 후향적 코호트 연구",
+  "title_en": "Association Between Admission NT-proBNP and Long-term Outcomes in Acute Myocardial Infarction: A Retrospective Cohort Study",
+  "objective": "급성 심근경색으로 입원한 환자에서 입원 시점 NT-proBNP 수치와 3년 주요 심혈관 사건(MACE)의 연관성을 평가한다.",
+  "design": "후향적 코호트 비교",
+  "disease": "급성 심근경색",
+  "institution": "영남대학교병원",
+  "department": "순환기내과",
+  "period": "IRB 승인일로부터 2년",
+  "study_data_window": "2017년 1월 1일 ~ 2022년 12월 31일",
+  "investigators": {
+    "pi": {
+      "name": "홍길동",
+      "name_en": "Gil-Dong Hong",
+      "title": "교수",
+      "affiliation": "영남대학교병원 순환기내과",
+      "email": "pi@example.org"
+    },
+    "co_investigators": [
+      {"name": "김연구", "role": "전임의", "affiliation": "영남대학교병원 순환기내과"},
+      {"name": "이학생", "role": "학생", "affiliation": "영남대학교 의과대학"}
+    ]
+  },
+  "target_n": "약 1,200명 추정 (본원 단일기관). 추후 제외기준 적용 후 최종 분석 대상 산출.",
+  "age_min": 19,
+  "inclusion_criteria": [
+    "연구 기간 중 급성 심근경색으로 영남대학교병원에 입원한 만 19세 이상 환자",
+    "입원 시점에 NT-proBNP가 측정된 환자"
+  ],
+  "exclusion_criteria": [
+    "말기 신부전(투석 중) 환자",
+    "추적관찰 기록이 없는 환자",
+    "입원 중 사망하여 퇴원 후 추적이 불가능한 환자"
+  ],
+  "background": "NT-proBNP는 심실벽 스트레스를 반영하는 바이오마커로 심부전 진단·예후 평가에 널리 사용된다. 급성 심근경색 환자에서 입원 시점 NT-proBNP의 장기 예후 예측 가치에 대한 단일기관 후향 자료는 제한적이어서 본 연구를 통해 이를 규명하고자 한다.",
+  "intervention_device": "없음",
+  "primary_endpoint": "3년 주요 심혈관 사건(MACE): 총 사망, 재발성 심근경색, 관상동맥 재관류, 심부전 입원의 복합",
+  "secondary_endpoints": [
+    "총 사망",
+    "심장 사망",
+    "재발성 심근경색",
+    "심부전 입원"
+  ],
+  "data_collected": [
+    "성별, 나이, 키, 몸무게, BMI, 활력징후",
+    "고혈압·당뇨·이상지질혈증·흡연력 등 과거력",
+    "혈액검사: NT-proBNP, Troponin, hs-CRP, Creatinine, eGFR, 지질 프로파일, HbA1c",
+    "심초음파: LVEF, 좌심실 용적, E/e′",
+    "관상동맥조영 소견 및 시술 정보",
+    "퇴원 약물 및 추적관찰 중 임상사건"
+  ],
+  "statistics": [
+    "범주형 변수는 빈도(%)로 제시하고 Chi-square 또는 Fisher's exact test로 비교한다.",
+    "연속형 변수는 정규성에 따라 mean±SD 또는 median[IQR]로 제시하고 t-test 또는 Mann-Whitney U test로 비교한다.",
+    "NT-proBNP는 로그 변환 또는 사분위로 범주화하여 분석한다.",
+    "임상사건은 Kaplan-Meier 생존분석으로 추정하고 Log-rank test로 비교한다.",
+    "Cox 비례위험모형으로 예후 인자를 보정 분석한다.",
+    "p-value < 0.05를 통계적으로 유의한 것으로 간주한다."
+  ],
+  "risk_benefit": "이미 시행된 검사 결과를 분석하는 후향적 의무기록 연구로 직접적인 위험 및 이익은 없다. 연구 결과는 향후 급성 심근경색 환자의 위험도 층화에 근거를 제공할 수 있다.",
+  "consent_waiver": {
+    "eligible": true,
+    "checkers": ["김연구", "이학생"],
+    "irb_file_no": ""
+  },
+  "references": [
+    {
+      "citation": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+      "pmid": "34447992",
+      "doi": "10.1093/eurheartj/ehab368"
+    },
+    {
+      "citation": "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth Universal Definition of Myocardial Infarction (2018). J Am Coll Cardiol. 2018;72(18):2231-2264.",
+      "pmid": "30153967",
+      "doi": "10.1016/j.jacc.2018.08.1038"
+    }
+  ]
+}

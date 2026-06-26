@@ -1,0 +1,77 @@
+{
+  "_안내": "이 파일을 복사해 본인 연구 내용으로 채우세요. '_'로 시작하는 키와 '<...>' 부분은 작성 후 삭제/교체. 영남대학교병원 순환기내과 후향연구 기준 양식입니다.",
+
+  "title": "<국문 과제명>",
+  "title_en": "<영문 과제명 (선택)>",
+  "objective": "<연구 목적 1~2문장>",
+  "design": "<예: 후향적 코호트 비교 / 후향적 단면연구 / 후향적 환자-대조군>",
+  "disease": "<대상질환>",
+
+  "institution": "영남대학교병원",
+  "department": "순환기내과",
+  "period": "IRB 승인일로부터 2년",
+  "study_data_window": "<자료 수집 대상 기간, 예: 2018년 1월 1일 ~ 2023년 12월 31일>",
+
+  "investigators": {
+    "pi": {
+      "name": "<연구책임자 성명>",
+      "name_en": "<영문 성명 (선택)>",
+      "title": "<직위, 예: 교수 / 임상조교수>",
+      "affiliation": "영남대학교병원 순환기내과",
+      "email": "<이메일>"
+    },
+    "co_investigators": [
+      {"name": "<공동연구자 성명>", "role": "<역할, 예: 전임의 / 전공의 / 학생>", "affiliation": "<소속>"}
+    ]
+  },
+
+  "target_n": "<목표 대상자 수 및 산출 근거>",
+  "age_min": 19,
+
+  "inclusion_criteria": [
+    "<선정 기준 1>",
+    "<선정 기준 2>"
+  ],
+  "exclusion_criteria": [
+    "<제외 기준 1>",
+    "<제외 기준 2>"
+  ],
+
+  "background": "<연구 배경 서술. 비워두면 '(연구 배경 서술 필요)'로 표시됨.>",
+  "intervention_device": "없음",
+
+  "primary_endpoint": "<1차 평가변수>",
+  "secondary_endpoints": [
+    "<2차 평가변수 1>",
+    "<2차 평가변수 2>"
+  ],
+
+  "data_collected": [
+    "<수집 자료 항목 1>",
+    "<수집 자료 항목 2>"
+  ],
+
+  "statistics": [
+    "<통계분석 방법 문장 1>",
+    "<통계분석 방법 문장 2>",
+    "p-value < 0.05를 통계적으로 유의한 것으로 간주한다."
+  ],
+
+  "risk_benefit": "<위험/이익. 비워두면 후향연구 기본문구가 들어감.>",
+
+  "consent_waiver": {
+    "_안내": "후향 의무기록 연구는 보통 동의면제 가능. eligible=true 유지.",
+    "eligible": true,
+    "checkers": ["<점검자1>", "<점검자2>"],
+    "irb_file_no": ""
+  },
+
+  "references": [
+    {
+      "_안내": "CITATION GROUNDING: pmid 또는 doi(또는 registry)가 있는 항목만 참고문헌에 출력됨. 셋 다 없으면 자동 제외.",
+      "citation": "<Vancouver 형식 전체 인용>",
+      "pmid": "<PMID>",
+      "doi": "<DOI>"
+    }
+  ]
+}
